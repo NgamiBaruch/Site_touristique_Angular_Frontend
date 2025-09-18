@@ -1,0 +1,87 @@
+/* Styles pour le conteneur principal */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Une couleur de fond douce */
+  display: flex; /* Active Flexbox */
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  height: 100vh; /* Permet au centrage vertical de s'appliquer à toute la hauteur de la fenêtre */
+  margin: 0;
+}
+
+.login-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Styles du formulaire */
+.login-form h2 {
+  margin-bottom: 8px;
+  color: #004d40; /* Couleur d'un site touristique */
+}
+
+.login-form p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Styles des champs de saisie */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Styles du bouton */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff8c00; /* Une couleur vive pour l'action */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e67e00;
+}
+
+/* Pied de page du formulaire */
+.form-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,130 @@
+.tourist-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 50px 20px 20px;
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-style: italic;
+  color: #bdc3c7;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 1.2em;
+  margin-bottom: 18px;
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+.footer-links, .social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li, .social-icons li {
+  margin-bottom: 10px;
+}
+
+.footer-links a, .footer-column p {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1em;
+}
+
+.newsletter-form button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background: #3498db;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #217dbb;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5em;
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3498db;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #34495e;
+  font-size: 0.95em;
+  padding-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    margin-bottom: 30px;
+  }
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}

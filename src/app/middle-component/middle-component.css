@@ -1,0 +1,202 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Import a handwriting font for "Explore the city" - Pacifico is a good choice */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Basic styling for the body and container */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    /* This will be the color of the text over the image, if no other color is specified */
+}
+
+.contener {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Background image and overlay */
+.contener::before {
+    content: '';
+    position: absolute;
+    background: url("/middle.png") no-repeat center top/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(60%);
+    /* Adjust brightness for better text readability */
+    z-index: -1;
+}
+
+/* Dialog content styling */
+.dialog {
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Title and subtitle styling */
+.titre {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #38c838;
+    /* Neon green color */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(56, 200, 56, 0.8), 0 0 20px rgba(56, 200, 56, 0.6);
+    /* Glow effect */
+}
+
+.sousTitre {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Search form styling */
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    padding: 8px;
+    margin-left: 240px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+}
+
+.input-form,
+.select-form {
+    flex-grow: 1;
+    padding: 0 20px;
+    /* Adjust padding for spacing */
+}
+
+.input-form input {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.input-form input:focus {
+    outline: none;
+}
+
+.select-form {
+    position: relative;
+    border-left: 1px solid #ddd;
+}
+
+.select-form select {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    color: #444;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-form::after {
+    content: '▾';
+    font-size: 1.2rem;
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Search button styling */
+.search-form {
+    padding: 0;
+}
+
+.search-form a {
+    display: block;
+    padding: 18px 40px;
+    background-color: #34495e;
+    /* Orange color from the image */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-form a:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .titre {
+        font-size: 2rem;
+    }
+
+    .sousTitre {
+        font-size: 2.5rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+    }
+
+    .input-form,
+    .select-form {
+        padding: 0;
+        border-left: none;
+        width: 100%;
+    }
+
+    .input-form input,
+    .select-form select {
+        padding: 15px 20px;
+    }
+
+    .select-form {
+        border-top: 1px solid #ddd;
+    }
+
+    .search-form {
+        width: calc(100% - 16px);
+        margin: 8px 0;
+    }
+
+    .search-form a {
+        width: 100%;
+        padding: 15px;
+    }
+
+   
+}

@@ -1,0 +1,40 @@
+<div class="reservation-table-container">
+  <table class="reservation-table">
+    <thead class="table-header">
+      <tr class="header-row">
+        <th class="id">ID</th>
+        <th class="nom-reservation">Nom reservation</th>
+        <th class="nom-site">Nom du site touristique</th>
+        <th class="date-debut">Date debut</th>
+        <th class="date-fin">Date fin</th>
+        <th class="date">Staut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Exemple de 2 lignes, à remplacer par une boucle Angular pour la vraie pagination -->
+      <tr class="data-row">
+        <td data-label="ID">1</td>
+        <td data-label="Nom reservation">John Doe</td>
+        <td data-label="Nom du site touristique">Tourist Spot A</td>
+        <td data-label="Date debut">2025-05-01</td>
+        <td data-label="Date fin">2025-06-07</td>
+        <td data-label="Date ">Encours</td>
+      </tr>
+      <tr class="data-row">
+        <td data-label="ID">2</td>
+        <td data-label="Nom reservation">Jane Smith</td>
+        <td data-label="Nom du site touristique">Tourist Spot A</td>
+        <td data-label="Date debut">2025-05-02</td>
+        <td data-label="Date fin">2025-06-02</td>
+        <td data-label="Date ">Encours</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <button disabled>&laquo;</button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>&raquo;</button>
+  </div>
+</div>

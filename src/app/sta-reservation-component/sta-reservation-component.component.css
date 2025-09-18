@@ -1,0 +1,82 @@
+.reservation-table-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  padding: 0;
+}
+
+.reservation-table {
+  width: 200vw;
+  max-width: 1230px;
+  min-width: 320px;
+  margin: 20px 20px;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.table-header {
+  background: #36857d;
+  color: #fff;
+}
+
+.header-row th {
+  padding: 18px 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.data-row td {
+  padding: 16px 10px;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.data-row:last-child td {
+  border-bottom: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0 0 0;
+  gap: 12px;
+}
+
+.pagination button {
+  background: #36857d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination .active {
+  background: #ffd700;
+  color: #36857d;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .reservation-table {
+    width: 100vw;
+    max-width: 198vw;
+  }
+}
