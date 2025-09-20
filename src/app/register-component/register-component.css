@@ -1,15 +1,25 @@
 /* Styles pour le conteneur principal */
-
 .signup-container {
-  background-color: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 450px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centre verticalement */
+  background-color: #f4f4f4;
+  padding: 0;
 }
 
-/* Styles pour le formulaire et les titres */
+/* Styles pour le formulaire */
+.signup-form {
+  background-color: #fff;
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Styles pour les titres */
 .signup-form h2 {
   text-align: center;
   margin-bottom: 8px;
@@ -53,7 +63,7 @@
 .signup-btn {
   width: 100%;
   padding: 15px;
-  background-color: #28a745;
+  background-color: #004d40;
   color: white;
   border: none;
   border-radius: 6px;
@@ -82,4 +92,11 @@
 
 .form-footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .signup-form {
+    padding: 24px 8px;
+    max-width: 98vw;
+  }
 }

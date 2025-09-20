@@ -8,4 +8,11 @@ import { RouterLink } from '@angular/router';
   templateUrl: './navigation-component.html',
   styleUrls: ['./navigation-component.css']
 })
-export class NavigationComponent { }
+export class NavigationComponent {
+    isCollapsed = true;
+    onLinkClick() {
+    this.isCollapsed = true;
+    console.log(this.isCollapsed);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+ }
