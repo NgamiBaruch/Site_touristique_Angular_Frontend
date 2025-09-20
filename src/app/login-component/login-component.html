@@ -1,23 +1,31 @@
-<div class="login-container">
-  <form class="login-form">
-    <h2>Connectez-vous à votre espace</h2>
-    <p>Trouvez et réservez votre prochaine aventure !</p>
-    
-    <div class="input-group">
-      <label for="email">Adresse Email</label>
-      <input type="email" id="email" name="email" placeholder="votre_email@exemple.com" required>
-    </div>
-    
-    <div class="input-group">
-      <label for="password">Mot de passe</label>
-      <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
-    </div>
-    
-    <button type="submit" class="login-btn">Se connecter</button>
-    
-    <div class="form-footer">
-      <a href="#">Mot de passe oublié ?</a>
-      <p>Pas encore de compte ? <a href="#">S'inscrire</a></p>
-    </div>
-  </form>
+<div class="login-page-wrapper">
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Connectez-vous à votre espace</h2>
+      <p>Trouvez et réservez votre prochaine aventure !</p>
+      
+      <div class="input-group">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" id="username" name="username" placeholder="nom d'utilisateur">
+      </div>
+
+
+      <div class="input-group">
+        <label for="email">Adresse Email</label>
+        <input type="email" id="email" name="email" placeholder="votre_email@exemple.com">
+      </div>
+      
+      <div class="input-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="Votre mot de passe">
+      </div>
+      
+      <button type="submit" class="login-btn" routerLink="se connecter">Se connecter</button>
+      
+      <div class="form-footer">
+        <a routerLink="">Mot de passe oublié ?</a>
+        <p>Pas encore de compte ? <a routerLink="/register">S'inscrire</a></p>
+      </div>
+    </form>
+  </div>
 </div>

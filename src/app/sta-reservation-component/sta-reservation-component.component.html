@@ -1,40 +1,86 @@
-<div class="reservation-table-container">
-  <table class="reservation-table">
-    <thead class="table-header">
-      <tr class="header-row">
-        <th class="id">ID</th>
-        <th class="nom-reservation">Nom reservation</th>
-        <th class="nom-site">Nom du site touristique</th>
-        <th class="date-debut">Date debut</th>
-        <th class="date-fin">Date fin</th>
-        <th class="date">Staut</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Exemple de 2 lignes, à remplacer par une boucle Angular pour la vraie pagination -->
-      <tr class="data-row">
-        <td data-label="ID">1</td>
-        <td data-label="Nom reservation">John Doe</td>
-        <td data-label="Nom du site touristique">Tourist Spot A</td>
-        <td data-label="Date debut">2025-05-01</td>
-        <td data-label="Date fin">2025-06-07</td>
-        <td data-label="Date ">Encours</td>
-      </tr>
-      <tr class="data-row">
-        <td data-label="ID">2</td>
-        <td data-label="Nom reservation">Jane Smith</td>
-        <td data-label="Nom du site touristique">Tourist Spot A</td>
-        <td data-label="Date debut">2025-05-02</td>
-        <td data-label="Date fin">2025-06-02</td>
-        <td data-label="Date ">Encours</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="pagination">
-    <button disabled>&laquo;</button>
-    <button class="active">1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>&raquo;</button>
+<app-navigation-component></app-navigation-component>
+
+<div class="mes-reservations-wrapper">
+  <div class="welcome-message">
+    <h2>Bienvenue a vos statistiques de reservations!</h2>
+    <p>Voici le résumé de vos réservations et services touristiques.</p>
+  </div>
+
+  <div class="stats-actions-row">
+    <div class="card-conteneur">
+      <div class="card">
+        <h3>Réservations effectuées</h3>
+        <p class="card-value">12</p>
+      </div>
+      <div class="card">
+        <h3>Montant total réservation</h3>
+        <p class="card-value">350 000 FCFA</p>
+      </div>
+      <div class="card">
+        <h3>Total des services</h3>
+        <p class="card-value">8</p>
+      </div>
+      <div class="card">
+        <h3>Total hébergement</h3>
+        <p class="card-value">5</p>
+      </div>
+    </div>
+    <div class="actions-panel">
+      <input type="text" class="search-bar" placeholder="Rechercher une réservation..." />
+      <button class="add-btn">+ Nouvelle réservation</button>
+    </div>
+  </div>
+
+  <div class="reservation-table-container">
+    <table class="reservation-table">
+      <thead class="table-header">
+        <tr class="header-row">
+          <th>ID</th>
+          <th>Nom réservation</th>
+          <th>Site touristique</th>
+          <th>Date début</th>
+          <th>Date fin</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="data-row">
+          <td data-label="ID">1</td>
+          <td data-label="Nom réservation">John Doe</td>
+          <td data-label="Site touristique">Tourist Spot A</td>
+          <td data-label="Date début">2025-05-01</td>
+          <td data-label="Date fin">2025-06-07</td>
+          <td data-label="Statut">Encours</td>
+          <td data-label="Actions">
+            <button class="action-btn">Voir</button>
+            <button class="action-btn">Modifier</button>
+            <button class="action-btn cancel">Annuler</button>
+          </td>
+        </tr>
+        <tr class="data-row">
+          <td data-label="ID">2</td>
+          <td data-label="Nom réservation">Jane Smith</td>
+          <td data-label="Site touristique">Tourist Spot B</td>
+          <td data-label="Date début">2025-05-02</td>
+          <td data-label="Date fin">2025-06-02</td>
+          <td data-label="Statut">Terminée</td>
+          <td data-label="Actions">
+            <button class="action-btn">Voir</button>
+            <button class="action-btn">Modifier</button>
+            <button class="action-btn cancel">Annuler</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button disabled>&laquo;</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>&raquo;</button>
+    </div>
   </div>
 </div>
+
+<app-footer-component></app-footer-component>

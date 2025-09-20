@@ -1,12 +1,9 @@
-/* Styles pour le conteneur principal */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4; /* Une couleur de fond douce */
-  display: flex; /* Active Flexbox */
-  justify-content: center; /* Centre le contenu horizontalement */
-  align-items: center; /* Centre le contenu verticalement */
-  height: 100vh; /* Permet au centrage vertical de s'appliquer à toute la hauteur de la fenêtre */
-  margin: 0;
+.login-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f4f4f4;
 }
 
 .login-container {
@@ -17,7 +14,9 @@ body {
   width: 100%;
   max-width: 400px;
   text-align: center;
+  margin-top: 160px; /* Espace sous le header */
 }
+
 
 /* Styles du formulaire */
 .login-form h2 {
@@ -56,7 +55,7 @@ body {
 .login-btn {
   width: 100%;
   padding: 15px;
-  background-color: #ff8c00; /* Une couleur vive pour l'action */
+  background-color: #004d40;/* Une couleur vive pour l'action */
   color: white;
   border: none;
   border-radius: 5px;

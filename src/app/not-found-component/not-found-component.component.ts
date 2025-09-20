@@ -3,11 +3,11 @@ import { NavigationComponent } from "../navigation-component/navigation-componen
 import { FooterComponent } from "../footer-component/footer-component";
 
 @Component({
-  selector: 'app-sta-reservation-component',
+  selector: 'app-not-found-component',
   imports: [NavigationComponent, FooterComponent],
-  templateUrl: './sta-reservation-component.component.html',
-  styleUrl: './sta-reservation-component.component.css'
+  templateUrl: './not-found-component.component.html',
+  styleUrl: './not-found-component.component.css'
 })
-export class StaReservationComponentComponent {
+export class NotFoundComponentComponent {
 
 }

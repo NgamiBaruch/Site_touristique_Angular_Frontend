@@ -1,16 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavigationComponent } from "./navigation-component/navigation-component";
-import { FooterComponent } from "./footer-component/footer-component";
-import { MiddleComponent } from "./middle-component/middle-component";
-import { CardComponent } from "./card-component/card-component";
-import { StaReservationComponentComponent } from "./sta-reservation-component/sta-reservation-component.component";
+
+
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [NavigationComponent, FooterComponent, MiddleComponent, CardComponent, StaReservationComponentComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
