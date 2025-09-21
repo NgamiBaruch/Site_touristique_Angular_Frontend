@@ -42,3 +42,12 @@
   background: #fff;
   color: #00695c;
 }
+
+/* styles for active links (based on your routerLinkActive classes) */
+.fw-bold {
+  font-weight: bold;
+}
+
+.color {
+  color: #005a9c; /* example color */
+}

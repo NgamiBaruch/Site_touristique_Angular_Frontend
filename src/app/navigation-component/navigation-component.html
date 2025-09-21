@@ -13,7 +13,6 @@
 
         <ul>
           <li><a routerLink="/Accueil" routerLinkActive="fw-bold color" (click)="onLinkClick()">Accueil</a></li>
-          <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="onLinkClick()">Site Touristique</a></li>
           <li><a routerLink="/service" routerLinkActive="fw-bold color" (click)="onLinkClick()">Services</a></li>
           <li><a routerLink="/mesReservations" routerLinkActive="fw-bold color" (click)="onLinkClick()">Mes Reservations</a></li>
           <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="onLinkClick()">A Propos</a></li>
@@ -22,6 +21,7 @@
         </ul>
 
       </nav>
+      <router-outlet></router-outlet>
     </header>
             
         
