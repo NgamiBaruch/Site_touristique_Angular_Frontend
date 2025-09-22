@@ -1,21 +1,23 @@
 <div class="login-page-wrapper">
   <div class="login-container">
-    <form class="login-form" >
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
       <h2>Connectez-vous à votre espace</h2>
       <p>Trouvez et réservez votre prochaine aventure !</p>
       
       <div class="input-group">
         <label for="username">Nom d'utilisateur</label>
-        <input type="text"  id="username" name="Username" placeholder="nom d'utilisateur">
+        <input type="text" id="username" formControlName="username" placeholder="nom d'utilisateur">
       </div>
       
       <div class="input-group">
         <label for="password">Mot de passe</label>
-        <input type="password" id="password" name="Password" placeholder="Votre mot de passe">
+        <input type="password" id="password" formControlName="password" placeholder="Votre mot de passe">
       </div>
       
-      <button type="submit" class="login-btn" routerLink="/seConnecter" >Se connecter</button>
+      <button type="submit" class="login-btn" [disabled]="loginForm.invalid">Se connecter</button>
       
+      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
       <div class="form-footer">
         <a routerLink="">Mot de passe oublié ?</a>
         <p>Pas encore de compte ? <a routerLink="/register">S'inscrire</a></p>

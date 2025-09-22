@@ -32,6 +32,7 @@
     "@angular/router": "^20.2.0",
     "@angular/ssr": "^20.2.2",
     "express": "^5.1.0",
+    "jwt-decode": "^4.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -41,6 +42,7 @@
     "@angular/compiler-cli": "^20.2.0",
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
+    "@types/jwt-decode": "^2.2.1",
     "@types/node": "^20.17.19",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",

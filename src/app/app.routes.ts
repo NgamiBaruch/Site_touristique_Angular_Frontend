@@ -6,6 +6,7 @@ import { StaReservationComponentComponent } from './sta-reservation-component/st
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 import { ServiceComponent } from './service-component/service-component';
 import { FromComponent } from './from-component/from-component';
+import { ServicesClientComponentComponent } from './services-client-component/services-client-component.component';
 
 export const routes: Routes = [
     {path:'', component: LoginComponent},
@@ -13,6 +14,7 @@ export const routes: Routes = [
     {path:'Accueil', component: MiddleComponent},
     {path:'register', component: RegisterComponent},
     {path:'service' , component: ServiceComponent},
+     {path:'services' , component: ServicesClientComponentComponent},
     {path:'mesReservations', component: StaReservationComponentComponent},
     {path:'reservation', component: FromComponent},
     {path:'**', component: NotFoundComponentComponent}
