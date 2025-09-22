@@ -1,12 +1,43 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
-  selector: 'app-login-component',
-  imports: [RouterLink],
+  selector: 'app-login',
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login-component.html',
-  styleUrl: './login-component.css'
+  styleUrl:'./login-component.css'
+  
 })
 export class LoginComponent {
+  loginForm: FormGroup;
+  errorMessage: string = '';
 
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
+
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      const { username, password } = this.loginForm.value;
+
+      this.authService.login(username, password).subscribe({
+        next: () => {
+          this.router.navigate(['/Accueil']); // redirige vers la page d’accueil
+        },
+        error: () => {
+          this.errorMessage = 'Nom d’utilisateur ou mot de passe incorrect';
+        }
+      });
+    }
+  }
 }

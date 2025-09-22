@@ -1,30 +1,35 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title> Site Tourisque</title>
-    </head>
-    <body>
-        
-          
-    <header class="header">
-      <a href="#" class="logo">KamerTourism</a>
-      <nav class="nav">
+<header class="header">
+  <a href="#" class="logo">KamerTourism</a>
 
-        <ul>
-          <li><a routerLink="/Accueil" routerLinkActive="fw-bold color" (click)="onLinkClick()">Accueil</a></li>
-          <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="onLinkClick()">Site Touristique</a></li>
-          <li><a routerLink="/service" routerLinkActive="fw-bold color" (click)="onLinkClick()">Services</a></li>
-          <li><a routerLink="/mesReservations" routerLinkActive="fw-bold color" (click)="onLinkClick()">Mes Reservations</a></li>
-          <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="onLinkClick()">A Propos</a></li>
-          <li><a routerLink="#"routerLinkActive="fw-bold color" (click)="onLinkClick()">Se Deconnecter</a></li>
+  <input type="checkbox" id="menu-checkbox" hidden>
+  <label for="menu-checkbox" class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
 
-        </ul>
-
-      </nav>
-    </header>
-            
-        
-    </body>
-
-</html>
+  <nav class="nav">
+    <ul>
+      @if (authService.hasRole('ROLE_ADMIN')) {
+        <li><a routerLink="/Accueil" routerLinkActive="fw-bold color">Accueil</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Utilisateurs</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Agents</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Site</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Réservation</a></li>
+        <li><a routerLink="/" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
+      } @else if (authService.hasRole('ROLE_AGENT')) {
+        <li><a routerLink="/Accueil" routerLinkActive="fw-bold color">Accueil</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Utilisateurs</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Site</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Réservation</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
+      } @else if (authService.isLoggedIn()) {
+        <li><a routerLink="/Accueil" routerLinkActive="fw-bold color">Accueil</a></li>
+        <li><a routerLink="/services" routerLinkActive="fw-bold color">Services</a></li>
+        <li><a routerLink="/mesReservations" routerLinkActive="fw-bold color">Mes Réservations</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color">À Propos</a></li>
+        <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
+      }
+    </ul>
+  </nav>
+</header>

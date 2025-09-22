@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-navigation-component',
@@ -9,6 +11,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./navigation-component.css']
 })
 export class NavigationComponent {
+   constructor(public authService: AuthService) {} // Rendez authService public
     isCollapsed = true;
     onLinkClick() {
     this.isCollapsed = true;
