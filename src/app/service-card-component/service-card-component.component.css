@@ -99,6 +99,38 @@
 }
 
 
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0 0 0;
+  gap: 12px;
+}
+
+.pagination button {
+  background: #36857d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination .active {
+  background:#36857d ;
+  color: #d9e0e0;
+  font-weight: bold;
+}
+
+
 
 /* Réactivité pour les petits écrans */
 @media (max-width: 768px) {
