@@ -38,7 +38,7 @@ body {
     width: 100%;
     height: 100%;
     background: url("/kribi.jpeg") no-repeat center top/cover;
-    filter: brightness(40%);
+    filter: brightness(80%);
     z-index: -1;
 }
 
@@ -52,11 +52,11 @@ body {
 
 .titre {
     font-family: 'Pacifico', cursive;
-    font-size: 2rem;
+    font-size: 2.9rem;
     color: #38c838; /* Neon green */
     margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(56, 200, 56, 0.8),
-                 0 0 20px rgba(56, 200, 56, 0.6); /* Glow effect */
+    text-shadow: 0 0 10px rgba(241, 248, 241, 0.904),
+                 0 0 20px rgba(235, 250, 235, 0.918); /* Glow effect */
 }
 
 .sousTitre {

@@ -18,7 +18,7 @@
 .services-section h2::after {
     content: '';
     display: block;
-    width: 200px;
+    width: 700px;
     height: 4px;
     background-color: #09362b;
     margin: 10px auto 0;
