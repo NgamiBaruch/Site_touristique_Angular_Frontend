@@ -1,3 +1,4 @@
+import 'chart.js/auto';  // <<--- obligatoire pour enregistrer les chart types
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { appConfig } from './app/app.config';
@@ -11,4 +12,4 @@ bootstrapApplication(App, {
     provideRouter(routes)
   ]
 })
-  .catch((err) => console.error(err));
+.catch((err) => console.error(err));

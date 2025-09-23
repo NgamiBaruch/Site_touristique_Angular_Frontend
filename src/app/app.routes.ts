@@ -7,6 +7,7 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
 import { ServiceComponent } from './service-component/service-component';
 import { FromComponent } from './from-component/from-component';
 import { ServicesClientComponentComponent } from './services-client-component/services-client-component.component';
+import { AccueilAdminComponentComponent } from './accueil-admin-component/accueil-admin-component.component';
 
 export const routes: Routes = [
     {path:'', component: LoginComponent},
@@ -17,5 +18,6 @@ export const routes: Routes = [
      {path:'services' , component: ServicesClientComponentComponent},
     {path:'mesReservations', component: StaReservationComponentComponent},
     {path:'reservation', component: FromComponent},
+    {path:'DashboardAdmin', component: AccueilAdminComponentComponent},
     {path:'**', component: NotFoundComponentComponent}
 ];

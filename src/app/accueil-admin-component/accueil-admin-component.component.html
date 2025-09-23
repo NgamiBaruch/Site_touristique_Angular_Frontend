@@ -1,0 +1,88 @@
+<app-navigation-component></app-navigation-component>
+
+<div class="dashboard-container">
+  <div class="main-content">
+    <header class="main-header">
+      <h1>Tableau de Bord Administrateur</h1>
+      <div class="user-info">
+        <span>Bienvenue, Admin !</span>
+        <i class="fas fa-user-circle user-avatar"></i>
+      </div>
+    </header>
+
+    <!-- Statistiques -->
+    <section class="stats-cards">
+      <div class="card stat-card">
+        <div class="icon-container"><i class="fas fa-users"></i></div>
+        <div class="card-content">
+          <h3>Total Clients</h3>
+          <p class="stat-value">1250</p>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon-container"><i class="fas fa-user-tie"></i></div>
+        <div class="card-content">
+          <h3>Total Agents</h3>
+          <p class="stat-value">85</p>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon-container"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="card-content">
+          <h3>Total Sites Touristiques</h3>
+          <p class="stat-value">230</p>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon-container"><i class="fas fa-briefcase"></i></div>
+        <div class="card-content">
+          <h3>Total Services</h3>
+          <p class="stat-value">410</p>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon-container"><i class="fas fa-hotel"></i></div>
+        <div class="card-content">
+          <h3>Total Hébergements</h3>
+          <p class="stat-value">150</p>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="icon-container"><i class="fas fa-calendar-check"></i></div>
+        <div class="card-content">
+          <h3>Total Réservations</h3>
+          <p class="stat-value">780</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Graphiques -->
+    <section class="charts-section">
+      <!-- Camembert -->
+      <div class="card chart-card" *ngIf="isBrowser">
+        <h3>Répartition Clients & Agents</h3>
+        <div class="chart-canvas">
+          <canvas baseChart
+                  [data]="pieChartData"
+                  [options]="pieChartOptions"
+                  chartType="pie">
+          </canvas>
+        </div>
+      </div>
+
+      <!-- Graphique en ligne -->
+      <div class="card chart-card" *ngIf="isBrowser">
+        <h3>Évolution des Réservations</h3>
+        <div class="chart-canvas">
+          <canvas baseChart
+                  [data]="pieChartData"
+                  [options]="pieChartOptions"
+                  chartType="line">
+          </canvas>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<app-footer-component></app-footer-component>
