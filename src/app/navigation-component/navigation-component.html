@@ -11,9 +11,7 @@
   <nav class="nav">
     <ul>
       @if (authService.hasRole('ROLE_ADMIN')) {
-        <li><a routerLink="/Accueil" routerLinkActive="fw-bold color">Accueil</a></li>
-        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Utilisateurs</a></li>
-        <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Agents</a></li>
+        <li><a routerLink="/DashboardAdmin" routerLinkActive="fw-bold color">Dashboard</a></li>
         <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Site</a></li>
         <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Réservation</a></li>
         <li><a routerLink="/" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
@@ -22,13 +20,13 @@
         <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Utilisateurs</a></li>
         <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Site</a></li>
         <li><a routerLink="#" routerLinkActive="fw-bold color">Gestion Réservation</a></li>
-        <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
+        <li><a routerLink="/" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
       } @else if (authService.isLoggedIn()) {
         <li><a routerLink="/Accueil" routerLinkActive="fw-bold color">Accueil</a></li>
         <li><a routerLink="/services" routerLinkActive="fw-bold color">Services</a></li>
         <li><a routerLink="/mesReservations" routerLinkActive="fw-bold color">Mes Réservations</a></li>
         <li><a routerLink="#" routerLinkActive="fw-bold color">À Propos</a></li>
-        <li><a routerLink="#" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
+        <li><a routerLink="/" routerLinkActive="fw-bold color" (click)="authService.logout()">Se Déconnecter</a></li>
       }
     </ul>
   </nav>

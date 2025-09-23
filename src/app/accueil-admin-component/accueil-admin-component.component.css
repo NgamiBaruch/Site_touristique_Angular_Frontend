@@ -1,0 +1,202 @@
+.dashboard-container {
+
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Contenu Principal (Main Content) --- */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    font-size: 2rem;
+    color: #0d47a1;
+}
+
+/* --- Cartes de statistiques --- */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-container {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card-content h3 {
+    margin: 0 0 5px 0;
+    color: #757575;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.stat-value {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0d47a1;
+}
+
+/* --- Section Graphiques --- */
+.charts-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.chart-card {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-canvas {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* --- Section Profil --- */
+.profile-management-section {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    padding: 40px;
+}
+
+.profile-card h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #0d47a1;
+}
+
+.profile-form .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.profile-form input:focus {
+    outline: none;
+    border-color: #0d47a1;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #0d47a1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0a3680;
+}
+
+/* --- Responsivité --- */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .main-content {
+        padding: 20px;
+    }
+
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+}

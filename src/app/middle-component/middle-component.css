@@ -37,7 +37,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/middle.png") no-repeat center top/cover;
+    background: url("/principal.jpg") no-repeat center top/cover;
     filter: brightness(55%);
     z-index: -1;
 }
@@ -79,7 +79,8 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 50px;
     padding: 8px;
-    margin-left: 240px;
+    margin-top: 80px;
+    margin-left: 160px;
     width: 100%;
     max-width: 800px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
