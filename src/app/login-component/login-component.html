@@ -2,7 +2,7 @@
   <div class="login-container">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
       <h2>Connectez-vous à votre espace</h2>
-      <p>Trouvez et réservez votre prochaine aventure !</p>
+      <p>Explorer KamerTourism en toute securitè!</p>
       
       <div class="input-group">
         <label for="username">Nom d'utilisateur</label>
@@ -15,13 +15,13 @@
       </div>
       
       <button type="submit" class="login-btn" [disabled]="loginForm.invalid">Se connecter</button>
-      
-      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
 
+      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
       <div class="form-footer">
-        <a routerLink="">Mot de passe oublié ?</a>
+        <a routerLink="/forgetpassword">Mot de passe oublié ?</a>
         <p>Pas encore de compte ? <a routerLink="/register">S'inscrire</a></p>
       </div>
+
     </form>
   </div>
 </div>

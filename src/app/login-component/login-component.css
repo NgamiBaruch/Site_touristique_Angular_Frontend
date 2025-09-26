@@ -14,7 +14,9 @@
   width: 100%;
   max-width: 400px;
   text-align: center;
-  margin-top: 160px; /* Espace sous le header */
+  margin-top: 100px; /* Espace sous le header */
+  position: relative;
+  z-index: 100;
 }
 
 
@@ -78,6 +80,7 @@
 .form-footer a {
   color: #007bff;
   text-decoration: none;
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
