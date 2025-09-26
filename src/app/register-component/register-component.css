@@ -1,6 +1,6 @@
 /* Styles pour le conteneur principal */
 .signup-container {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   justify-content: center;
   align-items: center; /* Centre verticalement */
@@ -29,7 +29,7 @@
 .signup-form p {
   text-align: center;
   color: #666;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 /* Styles des champs de saisie */
@@ -80,7 +80,7 @@
 /* Styles du pied de page du formulaire */
 .form-footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 14px;
 }
 

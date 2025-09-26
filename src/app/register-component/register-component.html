@@ -1,41 +1,45 @@
 <div class="signup-container">
-  <form class="signup-form">
-    <h2>Créer un compte</h2>
-    <p>Rejoignez-nous et commencez votre aventure !</p>
-    
-    <div class="input-group">
-      <label for="name">Nom </label>
-      <input type="text" id="name" name="name" placeholder="Votre nom" required>
-    </div>
+ <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+<h2>Créer un compte</h2>
+<p>Rejoignez-nous et commencez votre aventure !</p>
 
-     <div class="input-group">
-      <label for="name">prenom </label>
-      <input type="prenom" id="prenom" name="prenom" placeholder="Votre prenom" required>
-    </div>
+<div class="input-group">
+<label for="name">Nom </label>
+<input type="text" id="name" formControlName="name" placeholder="Votre nom" required>
+ </div>
 
-    <div class="input-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
-    </div>
-    
-    <div class="input-group">
-      <label for="password">Mot de passe</label>
-      <input type="password" id="password" name="password" placeholder="Créez un mot de passe" required>
-    </div>
-    
-    <div class="input-group">
-      <label for="confirm-password">Confirmer le mot de passe</label>
-      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmez le mot de passe" required>
-    </div>
-     <div class="input-group">
-      <label for="name">preference</label>
-      <input type="preference" id="preference" name="preference" placeholder="Votre preference" required>
-    </div>
-    
-    <button type="submit" class="signup-btn" routerLink="/register">S'inscrire</button>
-    
-    <div class="form-footer">
-      <p>Vous avez déjà un compte ? <a routerLink="">Connectez-vous</a></p>
-    </div>
-  </form>
+<div class="input-group">
+ <label for="username">Prénom </label>
+ <input type="text" id="username" formControlName="username" placeholder="Votre prénom" required>
+ </div>
+
+<div class="input-group">
+ <label for="email">Email</label>
+ <input type="email" id="email" formControlName="email" placeholder="Votre adresse email" required>
+ </div>
+ <div class="input-group">
+ <label for="password">Mot de passe</label>
+ <input type="password" id="password" formControlName="password" placeholder="Créez un mot de passe" required>
+ </div>
+ <div class="input-group">
+ <label for="confirm-password">Confirmer le mot de passe</label>
+ <input type="password" id="confirm-password" formControlName="confirmPassword" placeholder="Confirmez le mot de passe" required>
+ </div>
+
+<div class="input-group">
+ <label for="preference">Préférence</label>
+ <input type="text" id="preference" formControlName="preference" placeholder="Votre préférence" required>
+ </div>
+
+  <input type="hidden" formControlName="role">
+
+     <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
+ <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+ <button type="submit" class="signup-btn" [disabled]="signupForm.invalid">S'inscrire</button>
+
+<div class="form-footer">
+ <p>Vous avez déjà un compte ? <a routerLink="">Connectez-vous</a></p>
+</div>
+</form>
 </div>
