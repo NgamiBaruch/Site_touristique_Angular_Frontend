@@ -14,6 +14,10 @@
   gap: 24px;
 }
 
+.justify{
+  text-align: justify;
+}
+
 .footer-column {
   flex: 1 1 200px;
   min-width: 220px;
