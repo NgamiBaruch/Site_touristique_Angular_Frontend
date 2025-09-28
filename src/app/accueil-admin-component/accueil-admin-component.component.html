@@ -10,57 +10,53 @@
       </div>
     </header>
 
-    <!-- Statistiques -->
     <section class="stats-cards">
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-users"></i></div>
         <div class="card-content">
           <h3>Total Clients</h3>
-          <p class="stat-value">1250</p>
+          <p class="stat-value">{{ dashboardStats?.totalClients || 0 }}</p>
         </div>
       </div>
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-user-tie"></i></div>
         <div class="card-content">
           <h3>Total Agents</h3>
-          <p class="stat-value">85</p>
+          <p class="stat-value">{{ dashboardStats?.totalAgents || 0 }}</p>
         </div>
       </div>
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-map-marker-alt"></i></div>
         <div class="card-content">
           <h3>Total Sites Touristiques</h3>
-          <p class="stat-value">230</p>
+          <p class="stat-value">{{ dashboardStats?.totalSites || 0 }}</p>
         </div>
       </div>
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-briefcase"></i></div>
         <div class="card-content">
           <h3>Total Services</h3>
-          <p class="stat-value">410</p>
+          <p class="stat-value">{{ dashboardStats?.totalServices || 0 }}</p>
         </div>
       </div>
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-hotel"></i></div>
         <div class="card-content">
-          <h3>Total Hébergements</h3>
-          <p class="stat-value">150</p>
+          <h3>Revenus Total</h3>
+          <p class="stat-value">{{ dashboardStats?.totalRevenus | currency:'EUR':'symbol':'1.2-2':'fr' }}</p>
         </div>
       </div>
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-calendar-check"></i></div>
         <div class="card-content">
           <h3>Total Réservations</h3>
-          <p class="stat-value">780</p>
+          <p class="stat-value">{{ dashboardStats?.totalReservations || 0 }}</p>
         </div>
       </div>
     </section>
 
-    <!-- Graphiques -->
     <section class="charts-section">
-      <!-- Camembert -->
-      <div class="card chart-card" *ngIf="isBrowser">
-        <h3>Répartition Clients & Agents</h3>
+      <div class="card chart-card" *ngIf="isBrowser && dashboardStats"> <h3>Répartition Clients & Agents</h3>
         <div class="chart-canvas">
           <canvas baseChart
                   [data]="pieChartData"
@@ -70,9 +66,7 @@
         </div>
       </div>
 
-      <!-- Graphique en ligne -->
-      <div class="card chart-card" *ngIf="isBrowser">
-        <h3>Évolution des Réservations</h3>
+      <div class="card chart-card" *ngIf="isBrowser && dashboardStats"> <h3>Évolution des Réservations</h3>
         <div class="chart-canvas">
           <canvas baseChart
                   [data]="pieChartData"
