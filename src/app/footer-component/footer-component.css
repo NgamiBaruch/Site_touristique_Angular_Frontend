@@ -129,7 +129,7 @@
   padding-top: 12px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1030px) {
   .footer-content {
     flex-direction: column;
     align-items: center;

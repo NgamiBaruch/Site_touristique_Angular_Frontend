@@ -207,7 +207,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1030px) {
   .stats-actions-row {
     flex-direction: column;
     gap: 24px;

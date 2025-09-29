@@ -1,0 +1,102 @@
+/* Styles pour le conteneur principal */
+.signup-container {
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centre verticalement */
+  background-color: #f4f4f4;
+  padding: 0;
+}
+
+/* Styles pour le formulaire */
+.signup-form {
+  background-color: #fff;
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Styles pour les titres */
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.signup-form p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Styles des champs de saisie */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Styles du bouton */
+.signup-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #218838;
+}
+
+/* Styles du pied de page du formulaire */
+.form-footer {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .signup-form {
+    padding: 24px 8px;
+    max-width: 98vw;
+  }
+}
