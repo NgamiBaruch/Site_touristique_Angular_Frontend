@@ -30,6 +30,7 @@ export class AccueilAdminComponent implements OnInit {
 
   // État de la modale
   showAgentModal = false;
+  showSiteModal = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -95,7 +96,7 @@ export class AccueilAdminComponent implements OnInit {
     }
   }
 
-  // Méthodes modale
+  // Méthodes modale agent
   openAgentModal(): void {
     this.showAgentModal = true;
   }
@@ -103,4 +104,14 @@ export class AccueilAdminComponent implements OnInit {
   closeAgentModal(): void {
     this.showAgentModal = false;
   }
+
+  //Methodes modale site
+  openSiteModal(): void {
+    this.showSiteModal = true;
+  }
+  
+  closeSiteModal():void{
+      this.showSiteModal = false;
+  }
+
 }
