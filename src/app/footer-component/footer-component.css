@@ -11,7 +11,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 24px;
+  gap: 104px;
 }
 
 .justify{
@@ -19,22 +19,13 @@
 }
 
 .footer-column {
-  flex: 1 1 200px;
+  flex: 1 2 200px;
   min-width: 220px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.logo-column {
-  align-items: center;
-}
-
-.footer-logo {
-  max-width: 120px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+ 
 }
 
 .slogan {
@@ -51,6 +42,10 @@
   border-bottom: 2px solid #3498db;
   padding-bottom: 6px;
   display: inline-block;
+}
+
+.footer-column p {
+  text-align: justify;
 }
 
 .footer-links, .social-icons {
