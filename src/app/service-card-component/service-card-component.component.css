@@ -88,7 +88,7 @@
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: 600;
 }

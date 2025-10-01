@@ -17,8 +17,9 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router
+    
   ) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
@@ -32,7 +33,13 @@ export class LoginComponent {
 
       this.authService.login(username, password).subscribe({
         next: () => {
-          this.router.navigate(['/Accueil']); // redirige vers la page d’accueil
+
+          if(this.authService.hasRole('ROLE_ADMIN')){
+            this.router.navigate(['/DashboardAdmin']); // redirige vers la page d’accueil
+          }
+          else if(this.authService.hasRole('ROLE_CLIENT')){
+            this.router.navigate(['/Accueil']);
+          }
         },
         error: () => {
           this.errorMessage = 'Nom d’utilisateur ou mot de passe incorrect';

@@ -9,6 +9,7 @@ import { FromComponent } from './from-component/from-component';
 import { ServicesClientComponentComponent } from './services-client-component/services-client-component.component';
 import { ForgetPasswordComponentComponent } from './forget-password-component/forget-password-component.component';
 import { AccueilAdminComponent } from './accueil-admin-component/accueil-admin-component.component';
+import { AproposComponentComponent } from './apropos-component/apropos-component.component';
 
 export const routes: Routes = [
     {path:'', component: LoginComponent},
@@ -21,5 +22,6 @@ export const routes: Routes = [
     {path:'reservation', component: FromComponent},
     {path:'DashboardAdmin', component: AccueilAdminComponent},
     {path:'forgetpassword', component: ForgetPasswordComponentComponent},
+    {path:'APropos', component: AproposComponentComponent},
     {path:'**', component: NotFoundComponentComponent}
 ];
