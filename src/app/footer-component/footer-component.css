@@ -18,6 +18,10 @@
   text-align: justify;
 }
 
+.justify{
+  text-align: justify;
+}
+
 .footer-column {
   flex: 1 2 200px;
   min-width: 220px;

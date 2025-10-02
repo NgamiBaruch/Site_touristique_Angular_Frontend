@@ -17,7 +17,6 @@
       </div>
     </header>
 
-    <!-- Statistiques -->
     <section class="stats-cards">
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-users"></i></div>
@@ -68,7 +67,6 @@
       </div>
     </section>
 
-    <!-- Graphiques -->
     <section class="charts-section">
       <div class="card chart-card" *ngIf="isBrowser && dashboardStats">
         <h3>Répartition Clients & Agents</h3>
@@ -133,7 +131,7 @@
           <input type="text" id="telephone" formControlName="telephone" placeholder="Votre téléphone">
         </div>
 
-          <div class="input-group">
+        <div class="input-group">
           <label for="agence">Agence</label>
           <input type="text" id="agence" formControlName="agence" placeholder="Nom de l'agence">
         </div>
@@ -153,41 +151,35 @@
         <p>Rejoignez-nous et commencez votre aventure !</p>
 
         <div class="input-group">
-        <label for="name">Nom </label>
-        <input type="text" id="name" formControlName="name" placeholder="Votre nom" required>
+          <label for="name">Nom </label>
+          <input type="text" id="name" formControlName="name" placeholder="Nom du site" required>
         </div>
 
         <div class="input-group">
-        <label for="localisation">Localisation </label>
-        <input type="text" id="localisation" formControlName="localisation" placeholder="Votre localisation" required>
+          <label for="localisation">Localisation </label>
+          <input type="text" id="localisation" formControlName="localisation" placeholder="Localisation" required>
         </div>
 
         <div class="input-group">
-        <label for="climat">Climat</label>
-        <input type="text" id="climat" formControlName="climat" placeholder="Votre climat" required>
+          <label for="climat">Climat</label>
+          <input type="text" id="climat" formControlName="climat" placeholder="Climat" required>
         </div>
 
         <div class="input-group">
-        <label for="description">Description</label>
-        <input type="text" id="description" formControlName="description" placeholder="Votre description" required>
+          <label for="description">Description</label>
+          <input type="text" id="description" formControlName="description" placeholder="Description" required>
         </div>
-
 
         <div class="input-group">
-        <label for="photo">Photo</label>
-        <input type="file" id="photo" formControlName="photo" placeholder="Entrer l'URL de la photo" required>
+          <label for="photo">Photo</label>
+          <input type="file" id="photo" formControlName="photo" required>
         </div>
 
-          <input type="hidden" formControlName="role">
-
-            <p class="success-message"></p> 
+        <p class="success-message"></p> 
         <p class="error-message"></p>
 
         <button type="submit" class="signup-btn" [disabled]="siteForm.invalid">Enregistrer</button>
-
       </form>
-
-
   </div>
 </div>
 
