@@ -37,8 +37,13 @@ export class LoginComponent {
           if(this.authService.hasRole('ROLE_ADMIN')){
             this.router.navigate(['/DashboardAdmin']); // redirige vers la page d’accueil
           }
-          else if(this.authService.hasRole('ROLE_CLIENT')){
+          if(this.authService.hasRole('ROLE_CLIENT')){
             this.router.navigate(['/Accueil']);
+          }
+          else if(this.authService.hasRole('ROLE_AGENT')){
+
+            this.router.navigate(['/Accueil'])
+
           }
         },
         error: () => {

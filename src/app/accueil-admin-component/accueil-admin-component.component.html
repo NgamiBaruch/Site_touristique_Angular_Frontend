@@ -8,7 +8,7 @@
       <div class="buton">
         <!-- Bouton qui ouvre la modale -->
         <button class="btn-agent" (click)="openAgentModal()">+ Nouveau Agent</button>
-        <button class="btn-site" (click)="openSiteModal()">+ Nouveau service </button>
+        <button class="btn-site" (click)="openSiteModal()">+ Nouveau site </button>
       </div>
 
       <div class="user-info">
@@ -99,49 +99,47 @@
 <div class="modal-backdrop" *ngIf="showAgentModal">
   <div class="modal-content">
     <span class="close-btn" (click)="closeAgentModal()">&times;</span>
-
-      <form class="signup-form">
+      <form class="signup-form" [formGroup]="agentForm" (ngSubmit)="submitAgent()" >
         <h2>Enregistrer un agent</h2>
         <p>Rejoignez-nous et commencez votre aventure !</p>
 
         <div class="input-group">
-        <label for="name">Nom </label>
-        <input type="text" id="name" formControlName="name" placeholder="Votre nom" required>
+          <label for="name">Nom</label>
+          <input type="text" id="name" formControlName="name" placeholder="Votre nom">
         </div>
 
         <div class="input-group">
-        <label for="username">Prénom </label>
-        <input type="text" id="username" formControlName="username" placeholder="Votre prénom" required>
+          <label for="username">Prénom</label>
+          <input type="text" id="username" formControlName="username" placeholder="Votre prénom">
         </div>
 
         <div class="input-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" formControlName="email" placeholder="Votre adresse email" required>
-        </div>
-        <div class="input-group">
-        <label for="password">Mot de passe</label>
-        <input type="password" id="password" formControlName="password" placeholder="Créez un mot de passe" required>
-        </div>
-        <div class="input-group">
-        <label for="confirm-password">Confirmer le mot de passe</label>
-        <input type="password" id="confirm-password" formControlName="confirmPassword" placeholder="Confirmez le mot de passe" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" placeholder="Votre email">
         </div>
 
         <div class="input-group">
-        <label for="agence">Agence</label>
-        <input type="text" id="agence" formControlName="agence" placeholder="Entrer l'agence" required>
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" formControlName="password" placeholder="Mot de passe">
         </div>
 
-          <input type="hidden" formControlName="role">
+        <div class="input-group">
+          <label for="confirm-password">Confirmer mot de passe</label>
+          <input type="password" id="confirm-password" formControlName="confirmPassword" placeholder="Confirmez">
+        </div>
 
-            <p class="success-message"></p> 
-        <p class="error-message"></p>
+        <div class="input-group">
+          <label for="telephone">Téléphone</label>
+          <input type="text" id="telephone" formControlName="telephone" placeholder="Votre téléphone">
+        </div>
 
-        <button type="submit" class="signup-btn">Enregistrer</button>
+          <div class="input-group">
+          <label for="agence">Agence</label>
+          <input type="text" id="agence" formControlName="agence" placeholder="Nom de l'agence">
+        </div>
 
+        <button type="submit" class="signup-btn" [disabled]="agentForm.invalid">Enregistrer</button>
       </form>
-
-
   </div>
 </div>
 
@@ -150,7 +148,7 @@
   <div class="modal-content">
     <span class="close-btn" (click)="closeSiteModal()">&times;</span>
 
-      <form class="signup-form">
+      <form class="signup-form" [formGroup]="siteForm" (ngSubmit)="submitSite()">
         <h2>Enregistrer un site</h2>
         <p>Rejoignez-nous et commencez votre aventure !</p>
 
@@ -185,7 +183,7 @@
             <p class="success-message"></p> 
         <p class="error-message"></p>
 
-        <button type="submit" class="signup-btn">Enregistrer</button>
+        <button type="submit" class="signup-btn" [disabled]="siteForm.invalid">Enregistrer</button>
 
       </form>
 
