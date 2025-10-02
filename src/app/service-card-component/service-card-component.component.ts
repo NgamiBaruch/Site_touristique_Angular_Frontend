@@ -8,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class ServiceCardComponentComponent {
 
+  //Variable de modale
+
+  showServiceModal = false;
+
+    //Methodes modale site
+  openServiceModal(): void {
+    this.showServiceModal = true;
+  }
+  
+  closeServiceModal():void{
+      this.showServiceModal = false;
+  }
+
 }

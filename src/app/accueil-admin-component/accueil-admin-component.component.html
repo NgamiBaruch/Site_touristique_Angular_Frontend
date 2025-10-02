@@ -4,6 +4,13 @@
   <div class="main-content">
     <header class="main-header">
       <h1>Tableau de Bord Administrateur</h1>
+
+      <div class="buton">
+        <!-- Bouton qui ouvre la modale -->
+        <button class="btn-agent" (click)="openAgentModal()">+ Nouveau Agent</button>
+        <button class="btn-site" (click)="openSiteModal()">+ Nouveau site </button>
+      </div>
+
       <div class="user-info">
         <span>Bienvenue, Admin !</span>
         <i class="fas fa-user-circle user-avatar"></i>
@@ -18,6 +25,7 @@
           <p class="stat-value">{{ dashboardStats?.totalClients || 0 }}</p>
         </div>
       </div>
+
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-user-tie"></i></div>
         <div class="card-content">
@@ -25,6 +33,7 @@
           <p class="stat-value">{{ dashboardStats?.totalAgents || 0 }}</p>
         </div>
       </div>
+
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-map-marker-alt"></i></div>
         <div class="card-content">
@@ -32,6 +41,7 @@
           <p class="stat-value">{{ dashboardStats?.totalSites || 0 }}</p>
         </div>
       </div>
+
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-briefcase"></i></div>
         <div class="card-content">
@@ -39,6 +49,7 @@
           <p class="stat-value">{{ dashboardStats?.totalServices || 0 }}</p>
         </div>
       </div>
+
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-hotel"></i></div>
         <div class="card-content">
@@ -46,6 +57,7 @@
           <p class="stat-value">{{ dashboardStats?.totalRevenus | currency:'EUR':'symbol':'1.2-2':'fr' }}</p>
         </div>
       </div>
+
       <div class="card stat-card">
         <div class="icon-container"><i class="fas fa-calendar-check"></i></div>
         <div class="card-content">
@@ -56,7 +68,8 @@
     </section>
 
     <section class="charts-section">
-      <div class="card chart-card" *ngIf="isBrowser && dashboardStats"> <h3>Répartition Clients & Agents</h3>
+      <div class="card chart-card" *ngIf="isBrowser && dashboardStats">
+        <h3>Répartition Clients & Agents</h3>
         <div class="chart-canvas">
           <canvas baseChart
                   [data]="pieChartData"
@@ -66,7 +79,8 @@
         </div>
       </div>
 
-      <div class="card chart-card" *ngIf="isBrowser && dashboardStats"> <h3>Évolution des Réservations</h3>
+      <div class="card chart-card" *ngIf="isBrowser && dashboardStats">
+        <h3>Évolution des Réservations</h3>
         <div class="chart-canvas">
           <canvas baseChart
                   [data]="pieChartData"
@@ -76,6 +90,96 @@
         </div>
       </div>
     </section>
+  </div>
+</div>
+
+<!--  MODALE : formulaire Agent -->
+<div class="modal-backdrop" *ngIf="showAgentModal">
+  <div class="modal-content">
+    <span class="close-btn" (click)="closeAgentModal()">&times;</span>
+      <form class="signup-form" [formGroup]="agentForm" (ngSubmit)="submitAgent()" >
+        <h2>Enregistrer un agent</h2>
+        <p>Rejoignez-nous et commencez votre aventure !</p>
+
+        <div class="input-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" formControlName="name" placeholder="Votre nom">
+        </div>
+
+        <div class="input-group">
+          <label for="username">Prénom</label>
+          <input type="text" id="username" formControlName="username" placeholder="Votre prénom">
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" placeholder="Votre email">
+        </div>
+
+        <div class="input-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" formControlName="password" placeholder="Mot de passe">
+        </div>
+
+        <div class="input-group">
+          <label for="confirm-password">Confirmer mot de passe</label>
+          <input type="password" id="confirm-password" formControlName="confirmPassword" placeholder="Confirmez">
+        </div>
+
+        <div class="input-group">
+          <label for="telephone">Téléphone</label>
+          <input type="text" id="telephone" formControlName="telephone" placeholder="Votre téléphone">
+        </div>
+
+        <div class="input-group">
+          <label for="agence">Agence</label>
+          <input type="text" id="agence" formControlName="agence" placeholder="Nom de l'agence">
+        </div>
+
+        <button type="submit" class="signup-btn" [disabled]="agentForm.invalid">Enregistrer</button>
+      </form>
+  </div>
+</div>
+
+<!--  MODALE : formulaire Site -->
+<div class="modal-backdrop" *ngIf="showSiteModal">
+  <div class="modal-content">
+    <span class="close-btn" (click)="closeSiteModal()">&times;</span>
+
+      <form class="signup-form" [formGroup]="siteForm" (ngSubmit)="submitSite()">
+        <h2>Enregistrer un site</h2>
+        <p>Rejoignez-nous et commencez votre aventure !</p>
+
+        <div class="input-group">
+          <label for="name">Nom </label>
+          <input type="text" id="name" formControlName="name" placeholder="Nom du site" required>
+        </div>
+
+        <div class="input-group">
+          <label for="localisation">Localisation </label>
+          <input type="text" id="localisation" formControlName="localisation" placeholder="Localisation" required>
+        </div>
+
+        <div class="input-group">
+          <label for="climat">Climat</label>
+          <input type="text" id="climat" formControlName="climat" placeholder="Climat" required>
+        </div>
+
+        <div class="input-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" formControlName="description" placeholder="Description" required>
+        </div>
+
+        <div class="input-group">
+          <label for="photo">Photo</label>
+          <input type="file" id="photo" formControlName="photo" required>
+        </div>
+
+        <p class="success-message"></p> 
+        <p class="error-message"></p>
+
+        <button type="submit" class="signup-btn" [disabled]="siteForm.invalid">Enregistrer</button>
+      </form>
   </div>
 </div>
 

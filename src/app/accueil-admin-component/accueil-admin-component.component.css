@@ -23,8 +23,38 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
+    margin-top: 60px;
     border-bottom: 1px solid #e0e0e0;
 }
+
+.btn-agent{
+
+    background-color: #257554;
+    width: 250px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: #f4f7f6;
+    border: none;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    border-radius: 33px;
+}
+
+
+.btn-site{
+
+    background-color:  #257554;
+    width: 250px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #f4f7f6;
+    border: none;
+    border-radius: 33px;
+}
+
+
 
 .main-header h1 {
     margin: 0;
@@ -40,7 +70,7 @@
 
 .user-avatar {
     font-size: 2rem;
-    color: #0d47a1;
+    color: #257554;
 }
 
 /* --- Cartes de statistiques --- */
@@ -71,7 +101,7 @@
 
 .icon-container {
     background-color: #e3f2fd;
-    color: #0d47a1;
+    color: #257554;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -92,7 +122,7 @@
     margin: 0;
     font-size: 2.2rem;
     font-weight: 700;
-    color: #0d47a1;
+    color: #257554;
 }
 
 /* --- Section Graphiques --- */
@@ -124,68 +154,132 @@
     padding: 20px;
 }
 
-/* --- Section Profil --- */
-.profile-management-section {
-    max-width: 1800px;
-    margin: 0 auto;
+/* Fond sombre */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
 }
 
-.profile-card {
-    padding: 40px;
+/* Contenu de la modale */
+.modal-content {
+  /*background: #fff;*/
+  padding: 30px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 95%;
+  animation: fadeIn 0.3s ease;
 }
 
-.profile-card h2 {
-    margin-top: 0;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 1.8rem;
-    color: #0d47a1;
+/* Bouton fermer */
+.close-btn {
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+  color: #333;
 }
 
-.profile-form .form-group {
-    margin-bottom: 20px;
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
 }
 
-.profile-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
+/* Styles pour le conteneur principal */
+
+/* Styles pour le formulaire */
+.signup-form {
+  background-color: #fff;
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
-.profile-form input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition: border-color 0.2s;
+/* Styles pour les titres */
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #333;
 }
 
-.profile-form input:focus {
-    outline: none;
-    border-color: #0d47a1;
+.signup-form p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 15px;
 }
 
-.btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
+/* Styles des champs de saisie */
+.input-group {
+  margin-bottom: 18px;
 }
 
-.btn-primary {
-    background-color: #0d47a1;
-    color: white;
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
 }
 
-.btn-primary:hover {
-    background-color: #0a3680;
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Styles du bouton */
+.signup-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #218838;
+}
+
+/* Styles du pied de page du formulaire */
+.form-footer {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
 
 /* --- Responsivité --- */
 @media (max-width: 768px) {

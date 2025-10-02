@@ -1,0 +1,156 @@
+/* ================== SECTION A PROPOS ================== */
+.apropos {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1f5b5e 50%, #eefaf2 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.apropos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image */
+.apropos-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.apropos-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Texte */
+.apropos-text h1 {
+  font-size: 2.8rem;
+  color: black;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.apropos-text h1::after {
+  content: '';
+  display: block;
+  width: 400px;
+  height: 4px;
+  background: black;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.apropos-text p {
+  font-size: 1.3rem;
+  color: black;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.btn-primary {
+  background: #09301a;
+  color: white;
+  margin-top: 20px;
+  padding: 14px 32px;
+  border: none;
+  width: 500px;
+  height: 70px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+  background: #05552a;
+  transform: translateY(-3px);
+}
+
+/* ================== SECTION VALEURS ================== */
+.valeurs {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.valeurs h2 {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: black;
+  position: relative;
+}
+
+.valeurs h2::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 4px;
+  background: black;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.valeurs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.valeur-card {
+  background: #f5f5f5;
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.valeur-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.valeur-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.valeur-card h3 {
+  font-size: 1.4rem;
+  color: #0c7a3e;
+  margin-bottom: 12px;
+}
+
+.valeur-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ================== RESPONSIVE ================== */
+@media screen and (max-width: 992px) {
+  .apropos-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .apropos-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .apropos-text p {
+    font-size: 1.05rem;
+    
+  }
+}
